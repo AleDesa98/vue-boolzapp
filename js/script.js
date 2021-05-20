@@ -89,7 +89,12 @@ var app = new Vue(
             ]
         },
         methods: {
-
+            getImage: function(index) {
+                return "img/avatar" + this.contacts[index].avatar + ".jpg"
+            },
+            getLastMessages: function(index) {
+                return this.contacts[index].messages.length -1;
+            }
         }
     }
 ) 

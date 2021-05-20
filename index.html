@@ -39,46 +39,16 @@
                             <span>Cerca o inizia una nuova chat</span>
                         </div>
                     </div>
-                    <div class="chat chat_active">
-                        <img src="img/avatar_1.jpg" alt="">
+
+                    <div class="chat" v-for="(contact, index) in contacts">
+                        <img :src="getImage(index) " alt="">
                         <div class="anteprima">
-                            <div class="nome">chat 1</div>
-                            <div class="messaggio">messaggio chat 1</div>
+                            <div class="nome">{{ contacts[index].name }}</div>
+                            <div class="messaggio">{{ contacts[index].messages[getLastMessages(index)].text }}</div>
                         </div>
-                        <div class="data">01/01/2000 01:10:10</div>
+                        <div class="data">{{ contacts[index].messages[getLastMessages(index)].date }}</div>
                     </div>
-                    <div class="chat">
-                        <img src="img/avatar_2.jpg" alt="">
-                        <div class="anteprima">
-                            <div class="nome">chat 2</div>
-                            <div class="messaggio">messaggio chat 2</div>
-                        </div>
-                        <div class="data">01/01/2000 01:10:10</div>
-                    </div>
-                    <div class="chat">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div class="anteprima">
-                            <div class="nome">chat 3</div>
-                            <div class="messaggio">messaggio chat 3</div>
-                        </div>
-                        <div class="data">01/01/2000 01:10:10</div>
-                    </div>
-                    <div class="chat">
-                        <img src="img/avatar_4.jpg" alt="">
-                        <div class="anteprima">
-                            <div class="nome">chat 4</div>
-                            <div class="messaggio">messaggio chat 4</div>
-                        </div>
-                        <div class="data">01/01/2000 01:10:10</div>
-                    </div>
-                    <div class="chat">
-                        <img src="img/avatar_5.jpg" alt="">
-                        <div class="anteprima">
-                            <div class="nome">chat 5</div>
-                            <div class="messaggio">messaggio chat 5</div>
-                        </div>
-                        <div class="data">01/01/2000 01:10:10</div>
-                    </div>
+
                 </div>
                 <div class="col_right">
                     <div class="col_right_top">
