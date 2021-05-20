@@ -4,10 +4,119 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <link rel="stylesheet" href="css/style.css">
         <title>Boolzapp</title>
     </head>
     <body>
+        <div class="sfondo">
+            <div class="sfondo_top">
+
+            </div>
+            <div class="sfondo_bottom">
+
+            </div>
+            <div id="root">
+                <div class="col_left">
+                    <div class="col_left_top">
+                        <div class="avatar">
+                            <img src="img/avatar_io.jpg" alt="avatar utente">
+                            <div class="nome_utente">Alessandro De Santis</div>
+                        </div>
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <div class="notifica">
+                        <i class="fas fa-bell-slash"></i>
+                        <div class="notifica_text">
+                            <div class="text">Ricevi notifiche di nuovi messaggi</div>
+                            <div class="bottom">Attiva notifiche desktop</div>
+                        </div>
+                    </div>
+                    <div class="barra_ricerca">
+                        <div class="campo_ricerca">
+                            <i class="fas fa-search"></i>
+                            <span>Cerca o inizia una nuova chat</span>
+                        </div>
+                    </div>
+                    <div class="chat chat_active">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <div class="anteprima">
+                            <div class="nome">chat 1</div>
+                            <div class="messaggio">messaggio chat 1</div>
+                        </div>
+                        <div class="data">01/01/2000 01:10:10</div>
+                    </div>
+                    <div class="chat">
+                        <img src="img/avatar_2.jpg" alt="">
+                        <div class="anteprima">
+                            <div class="nome">chat 2</div>
+                            <div class="messaggio">messaggio chat 2</div>
+                        </div>
+                        <div class="data">01/01/2000 01:10:10</div>
+                    </div>
+                    <div class="chat">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div class="anteprima">
+                            <div class="nome">chat 3</div>
+                            <div class="messaggio">messaggio chat 3</div>
+                        </div>
+                        <div class="data">01/01/2000 01:10:10</div>
+                    </div>
+                    <div class="chat">
+                        <img src="img/avatar_4.jpg" alt="">
+                        <div class="anteprima">
+                            <div class="nome">chat 4</div>
+                            <div class="messaggio">messaggio chat 4</div>
+                        </div>
+                        <div class="data">01/01/2000 01:10:10</div>
+                    </div>
+                    <div class="chat">
+                        <img src="img/avatar_5.jpg" alt="">
+                        <div class="anteprima">
+                            <div class="nome">chat 5</div>
+                            <div class="messaggio">messaggio chat 5</div>
+                        </div>
+                        <div class="data">01/01/2000 01:10:10</div>
+                    </div>
+                </div>
+                <div class="col_right">
+                    <div class="col_right_top">
+                        <div class="avatar">
+                            <img src="img/avatar_1.jpg" alt="">
+                            <div class="chat_info">
+                                <div class="nome">chat 1</div>
+                                <div class="ultimo_accesso">ultimo accesso oggi alle 01/01/2000 01:10:10</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                    <div class="col_right_center">
+                        <div class="messaggio_inviato">
+                            Messaggio inviato 1
+                            <div class="data">01/01/2000 01:10:10</div>
+                        </div>
+                        <div class="messaggio_ricevuto">
+                            Messaggio ricevuto 1
+                            <div class="data">01/01/2000 01:10:10</div>
+                        </div>
+                    </div>
+                    <div class="col_right_bottom">
+                        <div class="emoji">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="nuovo_messaggio">
+                            <div class="box_messaggio">
+                                Scrivi un messaggio
+                            </div>
+                        </div>
+                        <div class="messaggio_vocale">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="js/script.js"></script>
     </body>
 </html>
