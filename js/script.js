@@ -92,6 +92,11 @@ var app = new Vue(
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: "",
                 status: "sent"
+            },
+            nuovoMessaggioRicevuto: {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: "Ok",
+                status: 'received'
             }
         },
         methods: {
@@ -117,6 +122,9 @@ var app = new Vue(
             setChat: function(index) {
                 this.chatAttiva = index
             },
+            reciveMessage: function() {
+                setTimeout(function () { v.contacts[this.chatAttiva].messages.push(this.nuovoMessaggioRicevuto) }, 3000);
+            },
             sendMessage: function() {
                 if (this.nuovoMessaggio.text.length > 0) {
                     this.contacts[this.chatAttiva].messages.push(this.nuovoMessaggio);
@@ -124,9 +132,20 @@ var app = new Vue(
                         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         text: "",
                         status: "sent"
-                    }
+                    };
                 }
-            }
+            },
+            c: function () {
+    
+                let x = this.contacts[this.chatAttiva].messages.push(this.nuovoMessaggioRicevuto);
+                return x;
+            },
+            botMessage: function() {
+                let x = this
+               setTimeout(function(){ 
+                   x.c();
+               }, 1000);
+           }
         }
     }
 ) 

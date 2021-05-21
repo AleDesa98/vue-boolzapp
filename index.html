@@ -86,7 +86,7 @@
                             <!-- <div class="box_messaggio">
                                 Scrivi un messaggio
                             </div> -->
-                            <input type="text" placeholder="Scrivi un messaggio" class="box_messaggio" v-model="nuovoMessaggio.text" @keydown.enter="sendMessage">
+                            <input type="text" placeholder="Scrivi un messaggio" class="box_messaggio" v-model="nuovoMessaggio.text" @keydown.enter="sendMessage" @keyup.enter="botMessage">
                         </div>
                         <div class="messaggio_vocale">
                             <i class="fas fa-microphone"></i>
