@@ -60,6 +60,7 @@
 .col_left_top i {
     margin: 0 10px;
     color: rgba(177,177,177,255);
+    cursor: pointer;
 }
 
 .notifica {
@@ -140,6 +141,10 @@
     background-color: rgba(233,235,235,255);
 }
 
+.chat:hover {
+    background-color: rgba(233,235,235,255);
+}
+
 .chat img {
     border-radius: 50%;
     height: 50px;
@@ -197,6 +202,7 @@
 .col_right_top i {
     margin: 0 10px;
     color: rgba(177,177,177,255);
+    cursor: pointer;
 }
 
 .col_right_center {
@@ -206,6 +212,7 @@
     height: calc(100% - 120px);
     padding: 20px;
     width: 100%;
+    overflow-y: auto;
 }
 
 .col_right_center .messaggio_inviato {
@@ -249,7 +256,7 @@
 
 .col_right_bottom .emoji {
     height: 100%;
-    width: 15%;
+    width: 60px;
     position: relative;
 }
 
@@ -260,11 +267,12 @@
     transform: translate(-50%, -50%);
     font-size: 24px;
     color: rgba(116,132,145,255);
+    cursor: pointer;
 }
 
 .col_right_bottom .nuovo_messaggio {
     height: 100%;
-    width: 70%;
+    width: calc(100% - 120px);
     position: relative;
 }
 
@@ -280,12 +288,13 @@
     line-height: 45px;
     padding-left: 15px;
     color: rgba(92,138,158,255);
+    border: 1px solid white;
 
 }
 
 .col_right_bottom .messaggio_vocale {
     height: 100%;
-    width: 15%;
+    width: 60px;
     position: relative;
 }
 
@@ -296,5 +305,6 @@
     transform: translate(-50%, -50%);
     font-size: 24px;
     color: rgba(116,132,145,255);
+    cursor: pointer;
 }
 

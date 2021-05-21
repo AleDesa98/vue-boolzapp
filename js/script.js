@@ -86,7 +86,13 @@ var app = new Vue(
                         }
                     ],
                 },
-            ]
+            ],
+            chatAttiva: 0,
+            nuovoMessaggio: {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: "",
+                status: "sent"
+            }
         },
         methods: {
             getImage: function(index) {
@@ -94,6 +100,32 @@ var app = new Vue(
             },
             getLastMessages: function(index) {
                 return this.contacts[index].messages.length -1;
+            },
+            getStatus: function(index) {
+                if (this.contacts[this.chatAttiva].messages[index].status == 'sent') {
+                    return "messaggio_inviato"
+                } else {
+                    return "messaggio_ricevuto"
+                }
+            },
+            getMessage: function(index) {
+                return this.contacts[this.chatAttiva].messages[index].text;
+            },
+            getDate: function(index) {
+                return this.contacts[this.chatAttiva].messages[index].date;
+            },
+            setChat: function(index) {
+                this.chatAttiva = index
+            },
+            sendMessage: function() {
+                if (this.nuovoMessaggio.text.length > 0) {
+                    this.contacts[this.chatAttiva].messages.push(this.nuovoMessaggio);
+                    this.nuovoMessaggio = {
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                        text: "",
+                        status: "sent"
+                    }
+                }
             }
         }
     }
