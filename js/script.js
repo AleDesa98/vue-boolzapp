@@ -97,7 +97,8 @@ var app = new Vue(
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: "Ok",
                 status: 'received'
-            }
+            },
+            ricerca: ""
         },
         methods: {
             getImage: function(index) {
@@ -145,7 +146,18 @@ var app = new Vue(
                setTimeout(function(){ 
                    x.c();
                }, 1000);
-           }
+            },
+            condizioneRicerca: function(index) {
+                var myStr = this.ricerca.toLowerCase();
+                str = this.contacts[index].name.toLowerCase();
+                var condizione = str.search(myStr)
+                if (condizione == 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
         }
     }
 ) 

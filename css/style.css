@@ -123,9 +123,13 @@
     margin: 0 20px;
 }
 
-.campo_ricerca span {
-    color: rgba(190,193,196,255);
+.campo_ricerca input {
     margin-left: 20px;
+    width: 100%;
+    border: 1px solid white;
+    height: 100%;
+    padding-left: 15px;
+    color: gray;
 }
 
 .chat {
@@ -139,6 +143,10 @@
 }
 .chat_attiva {
     background-color: rgba(233,235,235,255);
+}
+
+.non_trovato {
+    display: none;
 }
 
 .chat:hover {
